@@ -19,3 +19,62 @@ B node.js and N(ode)P(ackage)M(anagement)
     -->npm install jquery --save
     -->npm install nomalize.css --save
 5. Check the dependencies in package.json by a text editor (e.g. VS Code)
+C Gulp
+1. Install Gulp globally by entering the next command:
+    -->npm install gulp-cli --global
+    The gulp command is available from other folders as well.
+2. Intall Gulp for the project. Navigate to the project folder, where
+the project related package.json is, and enter the next command:
+    -->npm install gulp --save-dev
+3. Run the next command in the command line:
+    -->gulp
+    There is an error message: gulpfile.js is not found.
+4. Enter the next command in the command line:
+    -->touch gulpfile.js
+    It establishes a file in the main folder.
+    Open the file in a text editor, enter the next line and save:
+    var gulp = require('gulp');
+    Enter the next command in the command line:
+    -->gulp
+    There is an error message:
+    "Task 'default' is not in your gulpfile'
+    Open the gulpfile.js in a text editor, enter the next lines and save it:
+    gulp.task('default', function(){
+        console.log("Here is, the first default Gulp task is ready.");
+    });
+    -->gulp
+    The command above writes to the console:"Here is, the first default Gulp task is ready."
+    The initial setup of Gulp is ready. You can start to load in some
+    gulp plug-in-s which help to make the (developer's) life easier.
+5. Installing the first Gulp plug-in: 'gulp-watch'. Enter the next command in command line:
+    -->npm install gulp-watch --save-dev
+6. Gulp Workflow: gulp.src(), gulp.dest() and pipe().
+    Let's install postcss by entering the following lines:
+    -->npm install gulp-postcss --save-dev
+    This gulp-plug-in is a fast css postprocessor.
+7. There are some plug-in-s what we need to have an efficient work. 
+Theese are: autoprefixer, postcss-simple-vars and postcss-nested.
+The autoprefixer inserts prefixes automatically to ensure the browser compatiblity.
+Enter the next command to install:
+    -->npm install autoprefixer --save-dev
+    and the enter the next lines into gulpfile.js to activate it:
+    var autoprefixer = require('autoprefixer');
+    ...
+    .pipe(postcss([autoprefixer]))
+    ...
+The postcss-simple-vars makes it possible to use variables in the source files.
+Enter the next command to install:
+    -->npm install postcss-simple-vars --save-dev
+    and the enter the next lines into gulpfile.js to activate it:
+    var cssvars = require('postcss-simple-vars');
+    ...
+    .pipe(postcss([cssvars, autoprefixer]))
+    ...
+The postcss-nested makes it possible to write nested css declarations in the source files.
+Enter the next command to install:
+    -->npm install postcss-nested --save-dev
+    and the enter the next lines into gulpfile.js to activate it:
+    var nested = require('postcss-nested');
+    ...
+    .pipe(postcss([cssvars, nested, autoprefixer]))
+    ...
