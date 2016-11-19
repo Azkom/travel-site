@@ -57,7 +57,7 @@ Theese are: autoprefixer, postcss-simple-vars and postcss-nested.
 The autoprefixer inserts prefixes automatically to ensure the browser compatiblity.
 Enter the next command to install:
     -->npm install autoprefixer --save-dev
-    and the enter the next lines into gulpfile.js to activate it:
+    and enter the next lines into gulpfile.js to activate it:
     var autoprefixer = require('autoprefixer');
     ...
     .pipe(postcss([autoprefixer]))
@@ -65,7 +65,7 @@ Enter the next command to install:
 The postcss-simple-vars makes it possible to use variables in the source files.
 Enter the next command to install:
     -->npm install postcss-simple-vars --save-dev
-    and the enter the next lines into gulpfile.js to activate it:
+    and  enter the next lines into gulpfile.js to activate it:
     var cssvars = require('postcss-simple-vars');
     ...
     .pipe(postcss([cssvars, autoprefixer]))
@@ -73,8 +73,23 @@ Enter the next command to install:
 The postcss-nested makes it possible to write nested css declarations in the source files.
 Enter the next command to install:
     -->npm install postcss-nested --save-dev
-    and the enter the next lines into gulpfile.js to activate it:
+    and enter the next lines into gulpfile.js to activate it:
     var nested = require('postcss-nested');
     ...
     .pipe(postcss([cssvars, nested, autoprefixer]))
     ...
+The postcss-import plug-in imports the partial css file into the main one.
+Enter the next command to install:
+    -->npm install postcss-import --save-dev
+    and enter the next lines into gulpfile.js to activate it:
+    var cssImport = require('postcss-import');
+    ...
+    .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+8. Auto Browserrefresh in Gulp: browser-sync. Enter the next command 
+in command line:
+    -->npm install browser-sync --save-dev
+    Enter the next lines in gulpfile.js to activate it:
+    var browserSync = require('browser-sync').create();
+9. Reorganiztation of the gulpfile.js
+
+

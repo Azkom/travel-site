@@ -1,0 +1,39 @@
+.large-hero {
+    position: relative;
+/*The next group of declarations are examples 
+for the nested CSS in the source file. 
+'&' is equal to 'large-hero', based on the CSS rules.*/
+&__text-content {
+    position: absolute;
+    /*The next lines center the content vertically.*/
+    top:50%;
+    transform: translateY(-50%);
+    left:0;
+    width: 100%;
+    text-align: center;
+}
+&__title {
+    font-weight: 300;
+    color: #2f5572;
+    font-size: 4.8rem;
+    margin: 0;
+
+}
+&__subtitle {
+    font-weight: 300;
+    color: #2f5572;
+    font-size: 2.9rem;
+    margin: 0;
+}
+&__description {
+    color: #fff;
+    font-size: 1.875rem;
+    font-weight: 100;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    max-width: 30rem;
+    /*The net two lines make the horizontal centering*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
