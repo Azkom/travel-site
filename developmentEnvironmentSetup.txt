@@ -1,0 +1,21 @@
+A Git
+1. Download and install Git from git-scm.com
+2. Setup some basic environment data by
+    -->git config --global
+3. Make the folder for the project, e.g.
+    -->mkdir Projects
+    -->mkdir travel-site
+4. Navigate to that folder and enter:
+    -->git init
+    this will be the master folder for the project.
+5. Go to GitHub and establish an account
+
+B node.js and N(ode)P(ackage)M(anagement)
+1. Download and install node.jsLTS from nodejs.org
+2. Initialize NPM
+    -->npm init 
+3. Edit package.json and save
+4. Install some modules
+    -->npm install jquery --save
+    -->npm install nomalize.css --save
+5. Check the dependencies in package.json by a text editor (e.g. VS Code)
