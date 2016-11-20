@@ -466,13 +466,17 @@ body {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .large-hero {
     position: relative;
-
+    border-bottom: 10px solid #2f5572;
 }
 
 /*The next group of declarations are examples 
@@ -492,7 +496,7 @@ for the nested CSS in the source file.
 .large-hero__title {
   font-weight: 300;
   color: #2f5572;
-  font-size: 1.1rem;
+  font-size: 2.4rem;
   margin: 0;
 }
 
@@ -506,39 +510,29 @@ for the nested CSS in the source file.
 .large-hero__subtitle {
   font-weight: 300;
   color: #2f5572;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin: 0;
-}
-
-@media(min-width: 530px) {
-
-  .large-hero__subtitle {
-    font-size: 1.3rem;
-  }
-}
-
-@media(min-width: 800px) {
-
-  .large-hero__subtitle {
-    font-size: 2rem;
-  }
-}
-
-@media(min-width: 1200px) {
-
-  .large-hero__subtitle {
-    font-size: 2.9rem;
-  }
 }
 
 .large-hero__description {
   color: #fff;
-  font-size: 1.875rem;
+  font-size: 1.1rem;
   font-weight: 100;
   text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
   max-width: 30rem;/*The net two lines make the horizontal centering*/
   margin-left: auto;
   margin-right: auto;
+}
+
+@media(min-width: 530px) {
+
+  .large-hero__description {
+    font-size: 1.875rem;
+  }
+}
+
+.large-hero__image {
+  display: block;
 }
 
 .btn {
@@ -558,7 +552,127 @@ for the nested CSS in the source file.
   padding: 1.1rem 1.9rem;
 }
 
+@media(min-width: 530px) {
+
+  .btn__large {
+    font-size: 1.25rem;
+  }
+}
+
 .wrapper {
+    overflow: hidden;
     padding-left: 18px;
     padding-right: 18px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper__medium {
+  max-width: 960px;
+}
+
+/* Any wrapper class, within a wrapper class does not
+need padding left and right.*/
+
+.wrapper .wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-section {
+    padding: 1.2rem 0;
+}
+
+@media(min-width: 800px) {
+
+  .page-section {
+    padding: 4.5rem 0;
+  }
+}
+
+.page-section__blue {
+  background-color: #2f5572;
+  color:#fff;
+}
+
+.headline {
+    font-weight: 300;
+    font-size: 1.9rem;
+    color: #2f5572;
+}
+
+@media(min-width: 530px) {
+
+  .headline {
+    font-size: 2.875rem;
+  }
+}
+
+.headline__centered {
+  text-align: center;
+}
+
+.headline__orange {
+  color:#d59541;
+}
+
+.headline__small {
+  font-size: 1.1rem;
+}
+
+@media(min-width: 530px) {
+
+  .headline__small {
+    font-size: 1.875rem;
+  }
+}
+
+.headline__narrow {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headline__light {
+  font-weight: 100;
+}
+
+.headline strong {
+  font-weight: 400;
+}
+
+.headline__b-margin-small {
+  margin-bottom:.5em;
+}
+
+.headline__b-margin-large {
+  margin-bottom:1.6em;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row--gutters {
+  margin-right: -65px;
+}
+
+.row--gutters > div {
+  padding-right: 65px;
+}
+
+@media(min-width: 800px) {
+
+  .row__medium-4 {
+    float: left;
+    width: 33.33%;
+  }
+
+  .row__medium-8 {
+    float: left;
+    width: 66.66%;
+  }
 }
