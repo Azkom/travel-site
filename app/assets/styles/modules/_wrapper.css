@@ -17,4 +17,22 @@ need padding left and right.*/
 &--b-margin {
     margin-bottom: 3.875rem;
 }
+&--no-padding-until-medium {
+    padding-left: 0;
+    padding-right: 0;
+
+    @mixin atMedium {
+     padding-left: 18px;
+    padding-right: 18px;   
+    }
+}
+&--no-padding-until-large {
+    padding-left: 0;
+    padding-right: 0;
+
+    @mixin atLarge {
+     padding-left: 18px;
+    padding-right: 18px;   
+    }
+}
 }
