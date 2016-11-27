@@ -8,6 +8,10 @@
 &__medium {
     max-width: 960px;
 }
+
+&--narrow {
+    max-width: 470px;
+}
 /* Any wrapper class, within a wrapper class does not
 need padding left and right.*/
 .wrapper {
