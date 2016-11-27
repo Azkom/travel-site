@@ -11240,6 +11240,7 @@
 	            var that = this;
 	            this.pageSections.each(function () {
 	                var currentPageSection = this;
+	                //This is for scrolling DOWN
 	                new Waypoint({
 	                    element: currentPageSection,
 	                    handler: function handler(direction) {
@@ -11251,6 +11252,7 @@
 	                    },
 	                    offset: "18%"
 	                });
+	                // This is for scrolling UP
 	                new Waypoint({
 	                    element: currentPageSection,
 	                    handler: function handler(direction) {

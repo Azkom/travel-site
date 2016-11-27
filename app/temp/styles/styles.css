@@ -1139,7 +1139,7 @@ Instead edit gulp/templates/sprite */
   }
 
   .site-header--dark {
-    background-color: rgba(23,51,72, .85);
+    background-color: rgba(23, 51, 72, .85);
   }
 }
 
@@ -1202,7 +1202,8 @@ Instead edit gulp/templates/sprite */
     opacity: 1;
     z-index: 1;
     padding-top: 0;
-    trasform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

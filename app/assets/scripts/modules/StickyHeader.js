@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
 import smoothScroll from 'jquery-smooth-scroll';
+
 class StickyHeader {
     constructor () {
         this.siteHeader = $(".site-header");
@@ -37,6 +38,7 @@ class StickyHeader {
         var that = this;
         this.pageSections.each(function(){
             var currentPageSection = this;
+            //This is for scrolling DOWN
             new Waypoint({
                 element: currentPageSection,
                 handler: function(direction){
@@ -48,6 +50,7 @@ class StickyHeader {
                 },
                 offset: "18%"
             });
+            // This is for scrolling UP
              new Waypoint({
                 element: currentPageSection,
                 handler: function(direction){
