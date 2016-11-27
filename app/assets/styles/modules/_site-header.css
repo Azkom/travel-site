@@ -14,13 +14,7 @@
          position:fixed;
          background-color: rgba(47, 85, 114, .3);
 
-         &--dark {
-             background-color: rgba(23, 51, 72, .85);
-
-         position: fixed;
-         background-color: rgba(47, 85, 114, .3);
-
-         &--dark {
+        &--dark {
              background-color: rgba(23, 51, 72, .85); 
 
          }
