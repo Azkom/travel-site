@@ -26,14 +26,14 @@ class Modal {
     }
 
     openModal() {
-        this.modal.addClass("modal--is-visble");
+        this.modal.addClass("modal--is-visible");
         return false;
 
 
     }
 
     closeModal() {
-        this.modal.removeClass("modal--is-visble");
+        this.modal.removeClass("modal--is-visible");
 
     } 
 

@@ -11653,13 +11653,13 @@
 	    }, {
 	        key: "openModal",
 	        value: function openModal() {
-	            this.modal.addClass("modal--is-visble");
+	            this.modal.addClass("modal--is-visible");
 	            return false;
 	        }
 	    }, {
 	        key: "closeModal",
 	        value: function closeModal() {
-	            this.modal.removeClass("modal--is-visble");
+	            this.modal.removeClass("modal--is-visible");
 	        }
 	    }]);
 
