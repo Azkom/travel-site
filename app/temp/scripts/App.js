@@ -50,7 +50,7 @@
 
 	var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-	var _RevealOnScroll = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./modules/RevealOnScroll\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _RevealOnScroll = __webpack_require__(3);
 
 	var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
@@ -58,11 +58,11 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _StickyHeader = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./modules/StickyHeader\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _StickyHeader = __webpack_require__(5);
 
 	var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
-	var _Modal = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./modules/Modal\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _Modal = __webpack_require__(7);
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -10353,8 +10353,6 @@
 	} );
 
 
-<<<<<<< HEAD
-=======
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
@@ -11224,8 +11222,8 @@
 	    }
 
 	    _createClass(StickyHeader, [{
-	        key: 'refreshWayponts',
-	        value: function refreshWayponts() {
+	        key: 'refreshWaypoints',
+	        value: function refreshWaypoints() {
 	            this.lazyImages.load(function () {
 	                Waypoint.refreshAll();
 	            });
@@ -11681,6 +11679,5 @@
 
 	exports.default = Modal;
 
->>>>>>> lazyloading
 /***/ }
 /******/ ]);

@@ -47,19 +47,11 @@
 
 	'use strict';
 
-<<<<<<< HEAD
-	__webpack_require__(6);
-
-/***/ },
-
-/***/ 6:
-=======
 	__webpack_require__(8);
 
 /***/ },
 
 /***/ 8:
->>>>>>> lazyloading
 /***/ function(module, exports) {
 
 	(function(window, factory) {
