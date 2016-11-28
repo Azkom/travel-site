@@ -11209,6 +11209,7 @@
 	    function StickyHeader() {
 	        _classCallCheck(this, StickyHeader);
 
+	        this.lazyImages = (0, _jquery2.default)(".lazyload");
 	        this.siteHeader = (0, _jquery2.default)(".site-header");
 	        // The next line stores the status of the class large-hero...
 	        this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
@@ -11217,9 +11218,17 @@
 	        this.headerLinks = (0, _jquery2.default)(".primary-nav a");
 	        this.createPageSectionWaypoints();
 	        this.addSmoothScrolling();
+	        this.refreshWaypoints();
 	    }
 
 	    _createClass(StickyHeader, [{
+	        key: 'refreshWayponts',
+	        value: function refreshWayponts() {
+	            this.lazyImages.load(function () {
+	                Waypoint.refreshAll();
+	            });
+	        }
+	    }, {
 	        key: 'addSmoothScrolling',
 	        value: function addSmoothScrolling() {
 	            this.headerLinks.smoothScroll();
