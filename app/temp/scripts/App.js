@@ -11650,13 +11650,13 @@
 
 	            // clicking the x close modal button
 	            this.closeModalButton.click(this.closeModal.bind(this));
+
 	            //  pushes any key  
 	            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
 	        }
 	    }, {
 	        key: "keyPressHandler",
 	        value: function keyPressHandler(e) {
-	            // The code of escape key is 27
 	            if (e.keyCode == 27) {
 	                this.closeModal();
 	            }

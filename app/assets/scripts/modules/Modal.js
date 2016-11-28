@@ -14,22 +14,20 @@ class Modal {
 
         // clicking the x close modal button
          this.closeModalButton.click(this.closeModal.bind(this));
+
         //  pushes any key  
         $(document).keyup(this.keyPressHandler.bind(this));
     }
 
-    keyPressHandler(e){
-        // The code of escape key is 27
+    keyPressHandler(e) {
         if (e.keyCode == 27){
             this.closeModal();
         }
     }
 
-    openModal() {
+    openModal(){
         this.modal.addClass("modal--is-visible");
         return false;
-
-
     }
 
     closeModal() {
