@@ -832,11 +832,13 @@ need padding left and right.*/
   }
 }
 
-/* Begin Equal Height Rules */
+/*Adding the flexbox class to the class,
+we can trigger the run of the modernizr, 
+to make the necessary changes in the file.*/
 
 @media(min-width: 800px) {
 
-  .row--equal-height-at-medium {
+  .flexbox .row--equal-height-at-medium {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -846,16 +848,18 @@ need padding left and right.*/
 /* The next selector selects all columns
    within the nmodifier class. */
 
-.row--equal-height-at-medium > div {
+.flexbox .row--equal-height-at-medium > div {
   float: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+/* Begin Equal Height Rules */
+
 @media(min-width: 1010px) {
 
-  .row--equal-height-at-large {
+  .flexbox .row--equal-height-at-large {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -865,7 +869,7 @@ need padding left and right.*/
 /* The next selector selects all columns
    within the nmodifier class. */
 
-.row--equal-height-at-large > div {
+.flexbox .row--equal-height-at-large > div {
   float: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1032,6 +1036,10 @@ Instead edit gulp/templates/sprite */
             background-image: url('/assets/images/sprites/sprite-0f9283b3.svg');
         }
 
+.no-svg .icon {
+            background-image: url('/assets/images/sprites/sprite-0f9283b3.png');
+        }
+
 .icon--clear-view-escapes{
         width:142.4px;
         height:59.53px;
@@ -1180,8 +1188,8 @@ Instead edit gulp/templates/sprite */
   }
 
   .site-header--dark .site-header__logo {
-    -webkit-transform: scale(.57);
-            transform: scale(.57);
+    -webkit-transform: scale(.56);
+            transform: scale(.56);
     -webkit-transition: -webkit-transform .3s ease-out;
     transition: -webkit-transform .3s ease-out;
     transition: transform .3s ease-out;

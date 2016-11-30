@@ -79,7 +79,10 @@
 }
 
 /* Begin Equal Height Rules */
-  &--equal-height-at-medium {
+/*Adding the flexbox class to the class,
+we can trigger the run of the modernizr, 
+to make the necessary changes in the file.*/
+  .flexbox &--equal-height-at-medium {
       @mixin atMedium {
           display: flex;
       }
@@ -91,7 +94,7 @@
     }
   }
 
-  &--equal-height-at-large {
+  .flexbox &--equal-height-at-large {
       @mixin atLarge {
           display: flex;
       }
